@@ -1,0 +1,70 @@
+Serverless: Deprecation warning: Serverless Framework was enhanced with a new variables resolver which doesn't recognize "provider.variableSyntax" setting.Starting with a new major it will be the only resolver that's used.. Drop setting from a configuration to adapt to it
+            More Info: https://www.serverless.com/framework/docs/deprecations/#NEW_VARIABLES_RESOLVER
+Serverless: Running "serverless" installed locally (in service node_modules)
+ 
+ Serverless Warning --------------------------------------
+ 
+  CLI options definitions were upgraded with "type" property (which could be one of "string", "boolean", "multiple"). Below listed plugins do not predefine type for introduced options:
+   - ServerlessStepFunctions for "name", "data", "path", "stage", "region"
+   - ServerlessPlugin for "out"
+   - ServerlessOffline for "apiKey", "binPath", "cacheInvalidationRegex", "corsAllowHeaders", "corsAllowOrigin", "corsDisallowCredentials", "corsExposedHeaders", "disableCookieValidation", "enforceSecureCookies", "exec", "hideStackTraces", "host", "httpsProtocol", "location", "noAuth", "noEnvironment", "port", "prefix", "preserveTrailingSlash", "printOutput", "providedRuntime", "region", "resourceRoutes", "showDuration", "skipCacheInvalidation", "stage", "useSeparateProcesses", "websocketPort"
+  
+  Please report this issue in plugin issue tracker.
+ 
+Serverless: Configuration warning at 'provider.environment.VALIDATOR_LAMBDA_ALIAS': unsupported configuration format
+Serverless:  
+Serverless: Learn more about configuration validation here: http://slss.io/configuration-validation
+Serverless:  
+Serverless: Deprecation warning: Resolution of lambda version hashes was improved with better algorithm, which will be used in next major release.
+            Switch to it now by setting "provider.lambdaHashingVersion" to "20201221"
+            More Info: https://www.serverless.com/framework/docs/deprecations/#LAMBDA_HASHING_VERSION_V2
+Serverless: Deprecation warning: Starting with next major version, API Gateway naming will be changed from "{stage}-{service}" to "{service}-{stage}".
+            Set "provider.apiGateway.shouldStartNameWithService" to "true" to adapt to the new behavior now.
+            More Info: https://www.serverless.com/framework/docs/deprecations/#AWS_API_GATEWAY_NAME_STARTING_WITH_SERVICE
+Serverless: Deprecation warning: Starting with next major version, API Gateway-specific configuration keys "apiKeys", "resourcePolicy" and "usagePlan" will be relocated from "provider" to "provider.apiGateway"
+            More Info: https://www.serverless.com/framework/docs/deprecations/#AWS_API_GATEWAY_SPECIFIC_KEYS
+Service Information
+service: fhir-service
+stage: prod
+region: ap-southeast-2
+stack: fhir-service-prod
+resources: 107
+api keys:
+  developer-key-prod: a6apdwHc5SgtSbfn0EZJ89pQcWuRd1k2YkNeAkk6 - Key for developer to access the FHIR Api
+endpoints:
+  ANY - https://tcpj3i2zee.execute-api.ap-southeast-2.amazonaws.com/prod
+  ANY - https://tcpj3i2zee.execute-api.ap-southeast-2.amazonaws.com/prod/{proxy+}
+  GET - https://tcpj3i2zee.execute-api.ap-southeast-2.amazonaws.com/prod/metadata
+  GET - https://tcpj3i2zee.execute-api.ap-southeast-2.amazonaws.com/prod/tenant/{tenantId}/metadata
+functions:
+  fhirServer: fhir-service-prod-fhirServer
+  ddbToEs: fhir-service-prod-ddbToEs
+  startExportJob: fhir-service-prod-startExportJob
+  stopExportJob: fhir-service-prod-stopExportJob
+  getJobStatus: fhir-service-prod-getJobStatus
+  updateStatus: fhir-service-prod-updateStatus
+  uploadGlueScripts: fhir-service-prod-uploadGlueScripts
+layers:
+  None
+
+Stack Outputs
+ResourceDynamoDBTableV2StreamArn: arn:aws:dynamodb:ap-southeast-2:350426166855:table/resource-db-prod/stream/2021-12-27T02:33:58.717
+StartExportJobLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-prod-startExportJob:1
+UploadGlueScriptsLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-prod-uploadGlueScripts:1
+BulkExportStateMachineArn: arn:aws:states:ap-southeast-2:350426166855:stateMachine:BulkExportStateMachine-KHcw57DbNrNU
+FHIRBinaryBucket: fhir-service-prod-fhirbinarybucket-5aikf9dh8uum
+ElasticSearchDomainEndpoint: https://search-fhir-se-elasti-13y1v28sxayoq-sfhxch3jr7f7vb7misggux5vsi.ap-southeast-2.es.amazonaws.com
+ServerlessDeploymentBucketName: fhir-service-prod-serverlessdeploymentbucket-1wote3iadmnlr
+ExportRequestDynamoDBTableArn: arn:aws:dynamodb:ap-southeast-2:350426166855:table/export-request-prod
+CloudwatchExecutionLogGroupArn: arn:aws:logs:ap-southeast-2:350426166855:log-group:API-Gateway-Execution-Logs_tcpj3i2zee/prod:log-stream:*
+FhirServerLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-prod-fhirServer:1
+UpdateStatusLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-prod-updateStatus:1
+DdbToEsLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-prod-ddbToEs:1
+UserPoolId: ap-southeast-2_WLeCrrEb7
+UserPoolAppClientId: 2rpcql93vuu445tbb8jc5m7sof
+ResourceDynamoDBTableV2Arn: arn:aws:dynamodb:ap-southeast-2:350426166855:table/resource-db-prod
+GetJobStatusLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-prod-getJobStatus:1
+StopExportJobLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-prod-stopExportJob:1
+CloudwatchExecutionLogGroup: API-Gateway-Execution-Logs_tcpj3i2zee/prod
+ServiceEndpoint: https://tcpj3i2zee.execute-api.ap-southeast-2.amazonaws.com/prod
+
