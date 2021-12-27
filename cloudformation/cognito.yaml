@@ -39,6 +39,8 @@ Resources:
       UserPoolId: !Ref UserPool
       CallbackURLs:
         - !Ref CognitoOAuthDefaultRedirectURL
+        -  http://localhost:3000/callback
+        -  https://main.d2ukka2up8wr0x.amplifyapp.com/callback
       DefaultRedirectURI: !Ref CognitoOAuthDefaultRedirectURL
       ExplicitAuthFlows:
         - ALLOW_USER_PASSWORD_AUTH

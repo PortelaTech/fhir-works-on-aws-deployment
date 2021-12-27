@@ -1,0 +1,64 @@
+Serverless: Running "serverless" installed locally (in service node_modules)
+Serverless: Configuration warning:
+Serverless:   at 'provider.environment.VALIDATOR_LAMBDA_ALIAS['Fn::If'][1]': should be string
+Serverless:   at 'provider.environment.VALIDATOR_LAMBDA_ALIAS['Fn::If'][2]': should be string
+Serverless:  
+Serverless: Learn more about configuration validation here: http://slss.io/configuration-validation
+Serverless:  
+Serverless: Deprecation warning: Resolution of lambda version hashes was improved with better algorithm, which will be used in next major release.
+            Switch to it now by setting "provider.lambdaHashingVersion" to "20201221"
+            More Info: https://www.serverless.com/framework/docs/deprecations/#LAMBDA_HASHING_VERSION_V2
+Serverless: Deprecation warning: Starting with next major version, API Gateway-specific configuration keys "apiKeys", "resourcePolicy" and "usagePlan" will be relocated from "provider" to "provider.apiGateway"
+            More Info: https://www.serverless.com/framework/docs/deprecations/#AWS_API_GATEWAY_SPECIFIC_KEYS
+Service Information
+service: fhir-service
+stage: dev
+region: ap-southeast-2
+stack: fhir-service-dev
+resources: 118
+api keys:
+  developer-key-dev: pjrhskWU8M2el8QGKbPJH8VvwUo33a9Z3XGi973I - Key for developer to access the FHIR Api
+endpoints:
+  ANY - https://h9azbbark2.execute-api.ap-southeast-2.amazonaws.com/dev
+  ANY - https://h9azbbark2.execute-api.ap-southeast-2.amazonaws.com/dev/{proxy+}
+  GET - https://h9azbbark2.execute-api.ap-southeast-2.amazonaws.com/dev/metadata
+  GET - https://h9azbbark2.execute-api.ap-southeast-2.amazonaws.com/dev/tenant/{tenantId}/metadata
+functions:
+  fhirServer: fhir-service-dev-fhirServer
+  ddbToEs: fhir-service-dev-ddbToEs
+  startExportJob: fhir-service-dev-startExportJob
+  stopExportJob: fhir-service-dev-stopExportJob
+  getJobStatus: fhir-service-dev-getJobStatus
+  updateStatus: fhir-service-dev-updateStatus
+  uploadGlueScripts: fhir-service-dev-uploadGlueScripts
+  updateSearchMappings: fhir-service-dev-updateSearchMappings
+layers:
+  None
+
+Stack Outputs
+UploadGlueScriptsLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-dev-uploadGlueScripts:2
+BulkExportStateMachineArn: arn:aws:states:ap-southeast-2:350426166855:stateMachine:BulkExportStateMachine-MNvVcbLKu6ck
+ElasticSearchDomainKibanaEndpoint: https://search-fhir-se-elasti-1l4uct4i70i9w-tc4ts744xb2hf6q3lbtug5l55y.ap-southeast-2.es.amazonaws.com/_plugin/kibana
+ElasticSearchDomainEndpoint: https://search-fhir-se-elasti-1l4uct4i70i9w-tc4ts744xb2hf6q3lbtug5l55y.ap-southeast-2.es.amazonaws.com
+ServerlessDeploymentBucketName: fhir-service-dev-serverlessdeploymentbucket-tqcau4r5sgeh
+CloudwatchExecutionLogGroupArn: arn:aws:logs:ap-southeast-2:350426166855:log-group:API-Gateway-Execution-Logs_h9azbbark2/dev:log-stream:*
+FhirServerLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-dev-fhirServer:2
+UpdateStatusLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-dev-updateStatus:2
+UserPoolAppClientId: 33k0ggv7odoroau0ht7h6e5s70
+ResourceDynamoDBTableV2Arn: arn:aws:dynamodb:ap-southeast-2:350426166855:table/resource-db-dev
+StopExportJobLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-dev-stopExportJob:2
+CloudwatchExecutionLogGroup: API-Gateway-Execution-Logs_h9azbbark2/dev
+ResourceDynamoDBTableV2StreamArn: arn:aws:dynamodb:ap-southeast-2:350426166855:table/resource-db-dev/stream/2021-12-14T08:09:02.993
+CloudwatchAccessLogGroupArn: arn:aws:logs:ap-southeast-2:350426166855:log-group:/aws/api-gateway/fhir-service-dev:*
+ElasticSearchKibanaUserPoolId: ap-southeast-2_jDlTNOj69
+ElasticSearchKibanaUserPoolAppClientId: 487rcomflddkrk376lk8ueedfo
+StartExportJobLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-dev-startExportJob:2
+FHIRBinaryBucket: fhir-service-dev-fhirbinarybucket-1vxttfgh5btqn
+ExportRequestDynamoDBTableArn: arn:aws:dynamodb:ap-southeast-2:350426166855:table/export-request-dev
+DdbToEsLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-dev-ddbToEs:2
+UserPoolId: ap-southeast-2_pISnLdFHV
+GetJobStatusLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-dev-getJobStatus:2
+CloudwatchAccessLogGroup: /aws/api-gateway/fhir-service-dev
+UpdateSearchMappingsLambdaFunctionQualifiedArn: arn:aws:lambda:ap-southeast-2:350426166855:function:fhir-service-dev-updateSearchMappings:2
+ServiceEndpoint: https://h9azbbark2.execute-api.ap-southeast-2.amazonaws.com/dev
+

@@ -4,19 +4,19 @@
     {
       "enabled": true,
       "key": "API_URL",
-      "value": "<DEV_FHIR_API_ENDPOINT>",
+      "value": "https://h9azbbark2.execute-api.ap-southeast-2.amazonaws.com/dev",
       "type": "text"
     },
     {
       "enabled": true,
       "key": "API_KEY",
-      "value": "<DEV_API_KEY>",
+      "value": "pjrhskWU8M2el8QGKbPJH8VvwUo33a9Z3XGi973I",
       "type": "text"
     },
     {
       "enabled": true,
       "key": "COGNITO_TOKEN",
-      "value": "<COGNITO_AUTH_TOKEN>",
+      "value": "eyJraWQiOiJoN0tibmNsRnlaTW0xK0FRSWhweHpaNGQwRE1rNUFXYTY4QVZyQlJsSTBjPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4M2M5YzllOC01OWUyLTRjMmMtYTZjNy0wZWY2YTI4YzNlMDMiLCJjb2duaXRvOmdyb3VwcyI6WyJwcmFjdGl0aW9uZXIiXSwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC5hcC1zb3V0aGVhc3QtMi5hbWF6b25hd3MuY29tXC9hcC1zb3V0aGVhc3QtMl9wSVNuTGRGSFYiLCJjb2duaXRvOnVzZXJuYW1lIjoid29ya3Nob3B1c2VyIiwib3JpZ2luX2p0aSI6IjYzMTE0OTY4LWZkMjQtNDA0Zi1hNDkxLWI5ZDI4YmY3YzM0ZCIsImN1c3RvbTp0ZW5hbnRJZCI6InRlbmFudDEiLCJhdWQiOiIzM2swZ2d2N29kb3JvYXUwaHQ3aDZlNXM3MCIsImV2ZW50X2lkIjoiY2I1YjJhNDUtYzY4Zi00M2Y0LTkwNTYtODQ0MGZjNTQ0OThjIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2NDA1NjQ3NDgsImV4cCI6MTY0MDU2ODM0OCwiaWF0IjoxNjQwNTY0NzQ4LCJqdGkiOiI3NDk0NGExNC00MTE5LTQ0ZDctYmJhZi04NjQ5ODRhOWM0YTMiLCJlbWFpbCI6ImR1bW15QGVtYWlsLmNvbSJ9.SkEcka7fIEQ57omodfw6gQ_7KCK1h4BeCsbARL-l4-BAh8Zi-QNMqBLDYfWOf-RVuwbmzHvv1im_3_kYCNFn-HkwO_h82Pxt1RftxTsf8REoD3lUDdp6Znx0VFu9ZBC3dZnEOMqxeRFbFG_AhKrbNuvlsqCE7xHC9wy7pmUN_H0FdA2-Yg_1NhBpnTtIsKG87ZGSdXUe7Oyk0bYenggGHdH4Mme9cMx_yoHhhyfHvh9XX3ldksLdRdkrjPfLEC0EagiWMGH_ZVUSwtl9o0Zu6ry3O43kshVk3B7nXs7abvLqv5c9eX3CpSPxbnRp6B3irzayiC2MBwhTOmB5Y9i6XQ",
       "type": "text"
     }
   ],
